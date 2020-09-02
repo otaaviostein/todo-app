@@ -98,6 +98,8 @@ export default class Register extends Component {
         this.state.password
       ).then(
         response => {
+          this.props.history.push("/login");
+          window.location.reload();
           this.setState({
             message: response.data.message,
             successful: true
